@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <style>
+        body{
+            overflow: hidden;
+            max-height: 100vh;
+            transition: 0.4s ease;
+        }
+        .section1{
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1604755556528-1b9f175bb7d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section2{
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1530505849655-e0a1121554a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section3{
+            max-width: 100vw;
+            min-height: 100vh;
+        }
+    </style>
+    <body>
+        <div class="section1">
+
+        </div>
+        <div class="section2">
+
+        </div>
+        <div class="section3">
+            <video controls width="100%">
+                <source src="./Ek Tarfa.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+    </body>
+    <script>
+        document.querySelector(".section1").addEventListener("wheel", e=>{
+            if(e.deltaY > 0){
+                document.querySelector("body").style.transform = "translateY(-100vh)"
+            }
+        })
+        document.querySelector(".section2").addEventListener("wheel", e=>{
+            if(e.deltaY > 0){
+                document.querySelector("body").style.transform = "translateY(-201vh)"
+            }
+            else{
+                document.querySelector("body").style.transform = "translateY(0vh)"
+            }
+        })
+        document.querySelector(".section3").addEventListener("wheel", e=>{
+            if(e.deltaY < 0){
+                document.querySelector("body").style.transform = "translateY(-100vh)"
+            }
+        })
+    </script>
+</html>
